@@ -528,16 +528,16 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
 
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
-    user system
+    user radio
     socket ims_qmid stream 0660 system radio
     group radio log diag
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     class main
-    user system
+    user radio
     socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
+    group radio wifi radio inet log diag
     writepid /dev/cpuset/system-background/tasks
     disabled
 
@@ -711,7 +711,7 @@ service vendor.per_mgr /vendor/bin/pm-service
     writepid /dev/cpuset/system-background/tasks
     ioprio rt 4
     disabled
-    
+
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
