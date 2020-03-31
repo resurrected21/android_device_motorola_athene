@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
 
 # Crypto
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-dlsym-qti
+    vendor.qti.hardware.cryptfshw@1.0-service-qti
 
 # Display
 PRODUCT_PACKAGES += \
