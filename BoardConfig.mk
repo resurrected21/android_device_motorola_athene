@@ -143,6 +143,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 27258650624 # 26619776 * 1024 mmcblk0p48
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 260014080      # 253920 * 1024 mmcblk0p46
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+TARGET_KERNEL_HAVE_EXFAT := true
+TARGET_EXFAT_DRIVER := exfat
+
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist fsg
 
 # FM
@@ -167,9 +170,6 @@ TARGET_NO_RPC := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Extended filesystem support
-TARGET_EXFAT_DRIVER := sdfat
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
