@@ -708,27 +708,6 @@ service vendor.adsprpcd /vendor/bin/adsprpcd
     user media
     group media
 
-service vendor.per_mgr /vendor/bin/pm-service
-    class core
-    user system
-    group system
-    writepid /dev/cpuset/system-background/tasks
-    ioprio rt 4
-    disabled
-
-service vendor.per_proxy /vendor/bin/pm-proxy
-    class core
-    user system
-    group system
-    disabled
-
-on property:init.svc.per_mgr=running
-    start vendor.per_proxy
-
-on property:sys.shutdown.requested=*
-    stop vendor.per_proxy
-    stop vendor.ims_rtp_daemon
-
 service vendor.ppd /vendor/bin/mm-pp-daemon
     class late_start
     user system
