@@ -64,6 +64,12 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
+[fsg/]
+mode: 0755
+user: AID_ROOT
+group: AID_ROOT
+caps: 0 
+
 [AID_VENDOR_MOT_ACCY]
 value: 5000
 
