@@ -123,6 +123,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbson \
     libshims_camera \
+		libboringssl-compat \
     Snap
 
 # Codec2 modules
