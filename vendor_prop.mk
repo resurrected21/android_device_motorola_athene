@@ -153,7 +153,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	media.msm8956hw=0 \
 	mm.enable.qcom_parser=135715 \
 	vidc.enc.dcvs.extra-buff-count=2 \
-	vidc.enc.narrow.searchrange=1
+	vidc.enc.narrow.searchrange=1 \
+	debug.stagefright.ccodec=0 \
+	debug.stagefright.omx_default_rank.sw-audio=1 \
+	debug.stagefright.omx_default_rank=0
 
 # Misc
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
