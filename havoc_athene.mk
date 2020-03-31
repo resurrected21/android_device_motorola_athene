@@ -47,3 +47,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := motorola/athene/athene:8.1.0/OPJ28.111-22/532da:user/release-keys
 VENDOR_BUILD_FINGERPRINT := motorola/athene/athene:8.1.0/OPJ28.111-22/532da:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
+# Use Jelly
+TARGET_USE_JELLY := true
