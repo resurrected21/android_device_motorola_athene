@@ -16,8 +16,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_athene.mk
+    $(LOCAL_DIR)/havoc_athene.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_athene-userdebug \
-    arrow_athene-eng
+    havoc_athene-userdebug \
+    havoc_athene-eng
