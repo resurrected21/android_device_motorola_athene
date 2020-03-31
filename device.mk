@@ -195,9 +195,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# Fake QTI jar
+#  Telephony
 PRODUCT_PACKAGES += \
-    ims-ext-common \
+    ims-ext-common_system \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
+    telephony-ext
 
 # Keystore
 PRODUCT_PACKAGES += \
