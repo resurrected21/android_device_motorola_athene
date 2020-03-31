@@ -710,7 +710,8 @@ service vendor.per_mgr /vendor/bin/pm-service
     group system
     writepid /dev/cpuset/system-background/tasks
     ioprio rt 4
-
+    disabled
+    
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system

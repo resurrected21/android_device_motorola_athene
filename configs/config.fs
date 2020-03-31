@@ -34,12 +34,6 @@ group: AID_RADIO
 mode: 0755
 caps: NET_BIND_SERVICE
 
-[vendor/bin/pm-service]
-user: AID_SYSTEM
-group: AID_SYSTEM
-mode: 0755
-caps: NET_BIND_SERVICE
-
 [vendor/bin/mm-qcamera-daemon]
 mode: 0700
 user: AID_CAMERA
@@ -68,7 +62,7 @@ caps: 0
 mode: 0755
 user: AID_ROOT
 group: AID_ROOT
-caps: 0 
+caps: 0
 
 [AID_VENDOR_MOT_ACCY]
 value: 5000
