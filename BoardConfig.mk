@@ -53,15 +53,20 @@ BUILD_BROKEN_PHONY_TARGETS := true
 
 TARGET_FLATTEN_APEX := true
 
+# Kernel Toolchain
+ifneq ($(wildcard $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9),)
+  KERNEL_TOOLCHAIN := $(TOP_PATH)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin
+  KERNEL_TOOLCHAIN_PREFIX := arm-eabi-4.9-
+endif
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0 dm=\"system none ro,0 1 android-verity /dev/mmcblk0p47\"
-BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += loop.max_part=7 pm.sleep_mode=1
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
-TARGET_CUSTOM_DTBTOOL := dtbTool_custom
+TARGET_CUSTOM_DTBTOOL := dtbToolLineage
 BOARD_DTBTOOL_ARGS := --force-v3 --motorola 1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
