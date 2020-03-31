@@ -138,7 +138,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable Vulkan
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.graphics.vulkan.disable=true
- 
+
 # MotoActions
 PRODUCT_PACKAGES += \
     MotoActions
@@ -287,6 +287,7 @@ PRODUCT_PACKAGES += \
     init.oem.hw.sh \
     init.qcom.power.rc \
     init.qcom.rc \
+		init.radio.sh \
     ueventd.qcom.rc
 
 # Releasetools script

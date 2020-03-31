@@ -740,6 +740,12 @@ on property:init.svc.vendor.hwcomposer-2-1=running
 on property:init.svc.vendor.hwcomposer-2-1=restarting
     stop vendor.ppd
 
+service vendor.init-radio-sh /vendor/bin/init.radio.sh
+    class late_start
+    user root
+    group root radio
+    oneshot
+
 service vendor.wcnss-service /vendor/bin/wcnss_service
     class main
     user system

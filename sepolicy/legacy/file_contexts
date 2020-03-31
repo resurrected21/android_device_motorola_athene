@@ -5,3 +5,6 @@
 /persist                                                                      u:object_r:persist_file:s0
 
 /tombstones             													  u:object_r:rootfs:s0
+
+# Init shell scripts
+/(vendor|system/vendor)/bin/init\.radio\.sh        u:object_r:init_radio_exec:s0
