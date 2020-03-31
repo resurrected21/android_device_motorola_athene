@@ -497,6 +497,7 @@ on post-fs-data
     mkdir /data/vendor/misc/imager 0770 camera camera
 
     setprop vold.post_fs_data_done 1
+    setprop vold.decrypt trigger_restart_framework
 
 on property:sys.boot_completed=1
     start vendor.mmi-laser-sh
