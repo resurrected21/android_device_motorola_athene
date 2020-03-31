@@ -195,13 +195,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# IMS
+# Fake QTI jar
 PRODUCT_PACKAGES += \
-    ims-ext-common_system \
-    libshims_ims
-
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system
+    ims-ext-common \
 
 # Keystore
 PRODUCT_PACKAGES += \
