@@ -64,6 +64,18 @@ user: AID_ROOT
 group: AID_ROOT
 caps: 0
 
+[system/vendor/bin/pm-service]
+user: AID_SYSTEM
+group: AID_SYSTEM
+mode: 0755
+caps: NET_BIND_SERVICE
+
+[vendor/bin/pm-service]
+user: AID_SYSTEM
+group: AID_SYSTEM
+mode: 0755
+caps: NET_BIND_SERVICE
+
 [AID_VENDOR_MOT_ACCY]
 value: 5000
 
