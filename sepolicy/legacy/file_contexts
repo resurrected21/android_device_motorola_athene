@@ -5,3 +5,10 @@
 
 # Init shell scripts
 /(vendor|system/vendor)/bin/init\.radio\.sh        u:object_r:init_radio_exec:s0
+
+# shared mem log
+/dev/subsys_modem              u:object_r:subsys_modem_device:s0
+
+# System files
+/system/vendor/bin/pm-service           u:object_r:per_mgr_exec:s0
+/system/vendor/bin/qseecomd             u:object_r:tee_exec:s0
